@@ -60,6 +60,14 @@ a{
 a:hover{
   color: aquamarine;
 }
+ul{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;/*to get rid of bullet points*/
+}
+li{
+  margin-top: 1rem;
+}
 header a{ /*links inside header*/
   color: #ffffff;
   padding: 1rem;
@@ -79,6 +87,15 @@ a.aname{
 }
 .inlinedis.center{
   justify-content: center;
+}
+.inlinedis.top{
+  align-items: flex-start;/*items stick to top*/
+}
+.col01{
+  flex: 1 1 25rem;/*[ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]*/
+}
+.col02{
+  flex: 2 1 50rem;/*[ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]*/
 }
 img{
   border-radius: 0.5rem;
@@ -107,4 +124,9 @@ img.imgclass{
   color:#f0c040;
   margin: 0.1rem;
 }
+.rating span:last-child{
+  color: black;
+
+}
+
 

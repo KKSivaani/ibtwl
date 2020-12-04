@@ -1,7 +1,12 @@
 import React from 'react';
-import data from './data';
+import {BrowserRouter, Route} from 'react-router-dom' ;
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
+
+
 function App() {
   return (
+    <BrowserRouter>
     <div className="maindiv">
       <header className="inlinedis">
         <div>
@@ -15,47 +20,12 @@ function App() {
         </div>
       </header>
       <main>
-        <div>
-          <div className="inlinedis center">
-            {data.products.map((product) => (
-              <div key={product._id} className="items">
-                <a href={`/product/${product._id}`}>
-                  <img
-                    className="imgclass"
-                    src={product.image}
-                    alt={product.name}
-                  />
-                </a>
-                <div className="item-info">
-                  <a href={`/product/${product._id}`}>
-                    <h2>{product.name}</h2>
-                  </a>
-                  <div className="rating">
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                  </div>
-                  <div className="price">₹{product.price}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+          <Route path="/product/:id" component={ProductScreen}></Route>
+          <Route path="/" component={HomeScreen} exact></Route>
       </main>
       <footer className="inlinedis center">All right reserved</footer>
     </div>
+    </BrowserRouter>
   );
 }
 
