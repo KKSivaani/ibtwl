@@ -68,6 +68,35 @@ ul{
 li{
   margin-top: 1rem;
 }
+input,
+select,
+textarea,
+button{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem lightgray solid;
+  font-family: 'Times New Roman', Times, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+button{
+  background-color: lightgray;
+  cursor: pointer;/*Allows control over cursor appearance in an element*/
+}
+input:hover,
+select:hover,
+textarea:hover,
+button:hover{
+  border: 0.1rem black solid;
+}
+button.primary{
+  background-color:  #8791ee;
+}
+
+button.block{
+  width:100%;
+}
 header a{ /*links inside header*/
   color: #ffffff;
   padding: 1rem;
@@ -78,6 +107,14 @@ a.aname{
   font-size: 3rem;
   font-weight: bold;
 
+}
+.badge{
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
 }
 .inlinedis{
   display: flex;
@@ -97,13 +134,23 @@ a.aname{
 .col02{
   flex: 2 1 50rem;/*[ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]*/
 }
+.min30{
+  min-width: 30rem;
+}
 img{
   border-radius: 0.5rem;
   
 }
+img.tiny{
+  max-width: 5rem;
+  width: 100%;
+}
 img.imgclass{
   max-width: 35.74rem;
   width: 100%;
+}
+img.huge{
+  width: 95%;
 }
 .items{
   border: 0.1rem #c0c0c0 solid;
@@ -128,5 +175,58 @@ img.imgclass{
   color: black;
 
 }
-
+.loading{
+  display: block !important;
+}
+.success{
+  color:  lightgreen;
+}
+.danger{
+  color: red;
+}
+.alert{
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+.alert-info{
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+.alert-danger{
+  color: #a02020;
+  background-color: #ffe0e0e0;
+}
+.form{
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.form > div{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.form label{
+  margin: 1rem;
+  display: block;
+}
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #8791ee;
+  margin: 0;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
